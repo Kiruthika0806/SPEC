@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>FastAPI File UPLOADS</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">FASTAPI FILE UPLOADS</h1>
+
+        <!-- Image Upload Section -->
+        <div class="file-upload">
+            <h2>Upload Image for Contour Detection</h2>
+            <form id="image-upload-form" enctype="multipart/form-data">
+                <label for="image">Select an image file:</label>
+                <input type="file" id="image" name="file" accept="image/*" required>
+                <button type="submit" class="btn">Upload Image</button>
+            </form>
+            <div class="audio-preview" id="image-preview"></div>
+        </div>
+
+        <!-- Base64 Encoding Section -->
+        <div class="fast-forward">
+            <h2>Text to Base64 Encoding</h2>
+            <form id="base64-form">
+                <label for="text">Enter text to encode:</label>
+                <input type="text" id="text" name="text" required>
+                <button type="submit" class="btn">Encode to Base64</button>
+            </form>
+            <div class="audio-preview" id="base64-result"></div>
+        </div>
+
+        <!-- Audio Fast-Forward Section -->
+        <div class="fast-forward">
+            <h2>Fast-Forward Audio</h2>
+            <form id="audio-fast-forward-form" enctype="multipart/form-data">
+                <label for="audio">Select a WAV file:</label>
+                <input type="file" id="audio" name="file" accept=".wav" required>
+                <label for="fast-forward-time">Fast-Forward Time (ms):</label>
+                <input type="number" id="fast-forward-time" name="fast_forward_time" value="5000" required>
+                <button type="submit" class="btn">Fast-Forward Audio</button>
+            </form>
+            <div class="audio-preview" id="audio-preview"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
